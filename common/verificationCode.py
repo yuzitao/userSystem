@@ -2,7 +2,7 @@ from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 
 def sendsms(phone, code_j):
-   client = AcsClient('AccessKey', 'Secret Key', 'cn-hangzhou')
+   client = AcsClient('AccessKey', 'Secret Key', 'cn-hangzhou') #AccessKey 阿里云公钥 Secret Key 阿里云私钥  cn-hangzhou  阿里云短信接口节点
    req = CommonRequest()
    req.set_accept_format('json')
    req.set_domain('dysmsapi.aliyuncs.com')
