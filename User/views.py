@@ -8,6 +8,7 @@ from User.models import User
 
 
 class U_P_Register(APIView):
+
     def get(self, request):
         data = {
             'status': 200,
@@ -18,10 +19,10 @@ class U_P_Register(APIView):
     def post(self, request):
         username = request.POST.get('username')
         password = request.POST.get('password')
-        repassword = request.POST.get('repassword')
-        if password != None:
+        re_password = request.POST.get('re_password')
+        if password is not None:
 
-            if password == repassword:
+            if password == re_password:
                 user = User()
                 user.username = username
                 user.password = user.set_password(password)

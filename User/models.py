@@ -15,6 +15,5 @@ class User(models.Model):
         s = m.hexdigest()
         return s
 
-
     class Meta:
         db_table = 'user'
