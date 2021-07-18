@@ -58,3 +58,8 @@ class t_Register(APIView):
     def post(self,request):
         phone = request.POST.get('phone')
         yzm = request.POST.get('yzm')
+        data = {
+            'stauts': 200,
+            'msg': 'request ok'
+        }
+        return Response(data)
